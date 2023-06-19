@@ -1,8 +1,11 @@
+/**
+ * First removes previous grid, prompts user for a number between 1-100 
+ * then calls showGrid to display the grid with the size given by input
+ */
+
 function getSize(){
     let dim = 500
-    while (container.hasChildNodes()){
-        container.removeChild(container.firstChild)
-    }
+    container.innerHTML = ''
     while (dim > 100){
         input = parseInt(prompt('Enter a value: (between 1-100)'), 10)
         if (input > 0 && input < 100){
@@ -15,19 +18,23 @@ function getSize(){
     showGrid(dim)
 }
 
+
+/**
+ * creates a dim x dim grid of divs that change color on mouseenter
+ * @param {int} dim dimensions of the grid to be displayed
+ */
 function showGrid(dim){
-    for (let i = 0; i < dim; i++) {
-        const row = document.createElement('div')
-        row.classList = 'row'
-        container.appendChild(row)
-        for (let j = 0; j < dim; j++){
-            const col = document.createElement('div')
-            col.classList = 'col'
-            col.addEventListener("mouseenter", paint)
-            container.children[i].appendChild(col)
-        }
+    const cellSize = 500 / dim
+
+    for (let i = 0; i < dim * dim; i++) {
+        const gridElement = document.createElement('div')
+        gridElement.classList = 'gridElement'
+        gridElement.style.cssText = `width: ${cellSize}px; height: ${cellSize}px`
+        gridElement.addEventListener("mouseenter", paint)
+        container.appendChild(gridElement)
     }
 }
+
 
 function paint(e){
     this.classList.add('hover')

@@ -1,28 +1,27 @@
 
-.container, html, body {
+body {
     height: 100%;
     margin: 0px;
 }
 
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    background-color: var(--secondary-light);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 
-.row {
-    display: flex;
-    /* border-style: solid;
-    border-color: black; */
-    max-height: 25px;
-    flex: 1;
-}
-
-.col {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    max-width: 25px; 
-    flex: 1;
+.gridElement {
+    background-color: var(--secondary-light);
 }
 
 .hover {
