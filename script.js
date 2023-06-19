@@ -18,6 +18,15 @@ function getSize(){
     showGrid(dim)
 }
 
+function clearGrid(){
+    const cells = document.querySelectorAll('.gridElement')
+    cells.forEach(cell => {
+        if (cell.classList.contains('hover')){
+            cell.classList.remove('hover')
+        }
+    })
+}
+
 
 /**
  * creates a dim x dim grid of divs that change color on mouseenter
@@ -43,8 +52,11 @@ function paint(e){
 
 const container = document.querySelector('.container')
 
-const btn = document.querySelector('.button')
-btn.addEventListener('click', getSize)
+const btnSize = document.querySelector('#size')
+btnSize.addEventListener('click', getSize)
+
+const btnClear = document.querySelector('#clear')
+btnClear.addEventListener('click', clearGrid)
 
 
 
