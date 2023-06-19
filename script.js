@@ -1,5 +1,8 @@
 function getSize(){
     let dim = 500
+    while (container.hasChildNodes()){
+        container.removeChild(container.firstChild)
+    }
     while (dim > 100){
         input = parseInt(prompt('Enter a value: (between 1-100)'), 10)
         if (input > 0 && input < 100){
