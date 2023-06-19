@@ -1,0 +1,43 @@
+
+.container, html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    /* border-style: solid;
+    border-color: black; */
+    max-height: 25px;
+    flex: 1;
+}
+
+.col {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    max-width: 25px; 
+    flex: 1;
+}
+
+.hover {
+    background-color: blue;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.button {
+    padding: 8px;
+    border-radius: 10px;
+    border-style: none;
+}
