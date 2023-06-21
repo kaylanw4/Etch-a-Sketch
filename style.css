@@ -29,13 +29,13 @@ body {
     flex-wrap: wrap;
     width: 500px;
     height: 500px;
-    background-color: var(--secondary-light);
+    background-color: var(#fefefe);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
 
 .gridElement {
-    background-color: var(--secondary-light);
+    background-color: var(#fefefe);
 }
 
 .hover {
